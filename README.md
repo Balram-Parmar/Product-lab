@@ -250,6 +250,8 @@ make network calls, none of that retry loop is active code.
 
 ## Screenshots
 
+### Web interface
+
 **Archive home** — live counts, the search form, and the eight most recent posts.
 
 ![Sift home page](screenshots/screenshot.png)
@@ -278,6 +280,35 @@ The server log while the screenshots were taken:
 ![Flask request log](screenshots/Screenshot_20261115_184417.png)
 
 </details>
+
+### Database setup
+
+The local PostgreSQL setup: role and database creation, the `pg_hba.conf` auth
+switch, the schema, and all indexes.
+
+![PostgreSQL setup](screenshots/Screenshot_20261115_183528.png)
+
+### Query implementation
+
+The Flask data layer is built from small, parameterized query helpers.
+
+**Result projection and joins** — `RESULT_FROM` joins authors and aggregates
+hashtags per tweet.
+
+![Result projection and joins](screenshots/Screenshot_20261115_184709.png)
+
+**Archive counts** — `fetch_stats` powers the header totals.
+
+![Archive counts](screenshots/Screenshot_20261115_191600.png)
+
+**Ingestion runs** — `fetch_topics` lists runs and their post counts.
+
+![Ingestion runs](screenshots/Screenshot_20261115_191607.png)
+
+**Filtered search** — `run_search` counts the filtered set before applying
+`LIMIT`/`OFFSET`.
+
+![Filtered search](screenshots/Screenshot_20261115_191616.png)
 
 ## Troubleshooting
 
