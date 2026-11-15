@@ -28,22 +28,26 @@ are the same ones a live collector would use.
 ├── check.py                     # DB + payload pre-flight check
 ├── mock.json                    # X API v2-shaped dataset (24 posts, 8 authors)
 ├── requirements.txt
+├── pyproject.toml               # Vercel entrypoint + ruff config
+├── .python-version              # Python 3.12 for Vercel
 ├── .env.example
+├── DEPLOY.md                    # Vercel + hosted Postgres steps
 ├── db/
 │   ├── create_schema.sql        # tables, indexes, pg_trgm
 │   ├── connect.py               # DATABASE_URL connection helper
 │   └── setup_local.sh           # one-time local role/db/auth setup
 ├── ingest/
 │   └── fetch_and_load.py        # parse mock.json → upsert into Postgres
-├── web/
-│   ├── app.py                   # Flask routes, filters, safe SQL
-│   ├── templates/
-│   │   ├── base.html
-│   │   └── index.html
-│   └── static/
+├── public/
+│   └── assets/                  # served by Vercel's CDN at /assets/*
 │       ├── fonts.css
 │       ├── fonts/
 │       └── styles.css
+├── web/
+│   ├── app.py                   # Flask routes, filters, safe SQL
+│   └── templates/
+│       ├── base.html
+│       └── index.html
 ├── screenshots/
 ├── report.md                    # one-page design/API/rate-limit report
 └── README.md
@@ -147,6 +151,19 @@ Or with the Flask CLI:
 ```bash
 flask --app web.app run --debug
 ```
+
+## Deploy to Vercel
+
+The repository is Vercel-ready: `pyproject.toml` exports `web.app:app`, Python
+3.12 is pinned in `.python-version`, and static assets live in `public/assets`
+for the Vercel CDN.
+
+Vercel cannot reach a PostgreSQL server on `localhost`, so the deployment needs
+a hosted database (Neon, Vercel Postgres, Supabase, or any managed PostgreSQL).
+Set `DATABASE_URL` and `FLASK_SECRET_KEY` in the Vercel project, apply
+`db/create_schema.sql` to the hosted database, and load `mock.json` once from
+your machine. The full walkthrough, including pooled connection strings and
+verification, is in [DEPLOY.md](DEPLOY.md).
 
 ## Using the search page
 
