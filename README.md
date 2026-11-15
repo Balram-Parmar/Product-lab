@@ -1,4 +1,8 @@
-# Sift — X posts → PostgreSQL → web search
+<p align="center">
+  <img src="screenshots/logo.png" alt="Sift logo" width="120">
+</p>
+
+# X posts → PostgreSQL → web search
 
 A small, complete data pipeline: an X API v2-shaped payload is normalized into
 PostgreSQL, then searched through a Flask page with filters for text, hashtag,
@@ -86,11 +90,14 @@ pip install -r requirements.txt
 
 ### 3. Environment
 
+For a fresh clone, copy the template (this workspace already has a configured
+`.env`; do not overwrite it):
+
 ```bash
-cp .env.example .env
+[ -f .env ] || cp .env.example .env
 ```
 
-Fill in `DATABASE_URL` and `FLASK_SECRET_KEY`. `.env` is ignored by git. A
+Fill in `DATABASE_URL` and `FLASK_SECRET_KEY`. `.env` is ignored by git. The
 local `.env` is already wired to the role created by `setup_local.sh`.
 
 `X_BEARER_TOKEN` is kept for reference only; the current ingestion path reads
@@ -243,12 +250,34 @@ make network calls, none of that retry loop is active code.
 
 ## Screenshots
 
-Deliverable screenshots belong in `screenshots/`:
+**Archive home** — live counts, the search form, and the eight most recent posts.
 
-- `ingest.png` — terminal output of `python ingest/fetch_and_load.py`
-- `search.png` — the Flask page with filters and a results table
+![Sift home page](screenshots/screenshot.png)
 
-See `screenshots/README.md` for the capture checklist.
+**Searching for “AI”** — seven matches, the active filter chip, and highlighted text.
+
+![Search for AI](screenshots/Screenshot_20261115_184246.png)
+
+**Searching for “python”** — form state and the first rows.
+
+![Search for python](screenshots/Screenshot_20261115_184354.png)
+
+**Result table** — highlighted matches, hashtag chips, and metrics.
+
+![Python result table](screenshots/Screenshot_20261115_184401.png)
+
+**More results** — the table scrolled to the last rows.
+
+![More python results](screenshots/Screenshot_20261115_184408.png)
+
+<details>
+<summary>Flask request log</summary>
+
+The server log while the screenshots were taken:
+
+![Flask request log](screenshots/Screenshot_20261115_184417.png)
+
+</details>
 
 ## Troubleshooting
 
