@@ -1,0 +1,571 @@
+{
+  "data": [
+    {
+      "id": "1900000000000000001",
+      "text": "Shipped a small RAG service today: Postgres + pgvector for retrieval, 400 lines of Python, no framework. The boring stack keeps winning. #RAG #Python #Postgres",
+      "created_at": "2026-11-15T09:12:00.000Z",
+      "author_id": "1001",
+      "lang": "en",
+      "public_metrics": {
+        "retweet_count": 42,
+        "reply_count": 11,
+        "like_count": 318,
+        "quote_count": 6,
+        "bookmark_count": 57,
+        "impression_count": 18420
+      },
+      "entities": {
+        "hashtags": [
+          {"tag": "RAG", "start": 143, "end": 147},
+          {"tag": "Python", "start": 148, "end": 155},
+          {"tag": "Postgres", "start": 156, "end": 165}
+        ]
+      }
+    },
+    {
+      "id": "1900000000000000002",
+      "text": "Hot take: most agent demos fail in production because nobody instruments the tool calls. Add traces before you add another loop. #Agents #Evals",
+      "created_at": "2026-11-15T10:04:00.000Z",
+      "author_id": "1002",
+      "lang": "en",
+      "public_metrics": {
+        "retweet_count": 87,
+        "reply_count": 34,
+        "like_count": 612,
+        "quote_count": 19,
+        "bookmark_count": 104,
+        "impression_count": 42310
+      },
+      "entities": {
+        "hashtags": [
+          {"tag": "Agents", "start": 120, "end": 127},
+          {"tag": "Evals", "start": 128, "end": 134}
+        ]
+      }
+    },
+    {
+      "id": "1900000000000000003",
+      "text": "Spent the morning replacing a 900-line prompt with a 40-line prompt and a JSON schema. Evals went up 6 points. #LLM #Evals",
+      "created_at": "2026-11-14T16:40:00.000Z",
+      "author_id": "1003",
+      "lang": "en",
+      "public_metrics": {
+        "retweet_count": 23,
+        "reply_count": 8,
+        "like_count": 204,
+        "quote_count": 4,
+        "bookmark_count": 31,
+        "impression_count": 9820
+      },
+      "entities": {
+        "hashtags": [
+          {"tag": "LLM", "start": 111, "end": 115},
+          {"tag": "Evals", "start": 116, "end": 122}
+        ]
+      }
+    },
+    {
+      "id": "1900000000000000004",
+      "text": "Reminder: your embedding model is a dependency. Pin the version, store the model name next to every vector, and re-index on purpose. #MLOps #RAG",
+      "created_at": "2026-11-14T08:25:00.000Z",
+      "author_id": "1004",
+      "lang": "en",
+      "public_metrics": {
+        "retweet_count": 56,
+        "reply_count": 14,
+        "like_count": 389,
+        "quote_count": 9,
+        "bookmark_count": 72,
+        "impression_count": 22105
+      },
+      "entities": {
+        "hashtags": [
+          {"tag": "MLOps", "start": 123, "end": 129},
+          {"tag": "RAG", "start": 130, "end": 134}
+        ]
+      }
+    },
+    {
+      "id": "1900000000000000005",
+      "text": "日本語の埋め込みモデルを比較してみた。検索精度はモデルよりチャンク設計の方が効いた。 #LLM #RAG",
+      "created_at": "2026-11-13T22:18:00.000Z",
+      "author_id": "1005",
+      "lang": "ja",
+      "public_metrics": {
+        "retweet_count": 18,
+        "reply_count": 5,
+        "like_count": 141,
+        "quote_count": 3,
+        "bookmark_count": 26,
+        "impression_count": 7600
+      },
+      "entities": {
+        "hashtags": [
+          {"tag": "LLM", "start": 44, "end": 48},
+          {"tag": "RAG", "start": 49, "end": 53}
+        ]
+      }
+    },
+    {
+      "id": "1900000000000000006",
+      "text": "Wir haben die Evaluationspipeline auf 1.200 echte Nutzerfragen umgestellt. Synthetische Benchmarks waren optimistischer als die Realität. #Evals #GenAI",
+      "created_at": "2026-11-13T14:02:00.000Z",
+      "author_id": "1006",
+      "lang": "de",
+      "public_metrics": {
+        "retweet_count": 39,
+        "reply_count": 12,
+        "like_count": 287,
+        "quote_count": 7,
+        "bookmark_count": 48,
+        "impression_count": 15980
+      },
+      "entities": {
+        "hashtags": [
+          {"tag": "Evals", "start": 140, "end": 146},
+          {"tag": "GenAI", "start": 147, "end": 153}
+        ]
+      }
+    },
+    {
+      "id": "1900000000000000007",
+      "text": "Open weights, open evals, open failures. Today we publish the 38 tasks our model still cannot do. #OpenSource #LLM #Evals",
+      "created_at": "2026-11-12T17:30:00.000Z",
+      "author_id": "1007",
+      "lang": "en",
+      "public_metrics": {
+        "retweet_count": 132,
+        "reply_count": 27,
+        "like_count": 941,
+        "quote_count": 31,
+        "bookmark_count": 188,
+        "impression_count": 61240
+      },
+      "entities": {
+        "hashtags": [
+          {"tag": "OpenSource", "start": 104, "end": 115},
+          {"tag": "LLM", "start": 116, "end": 120},
+          {"tag": "Evals", "start": 121, "end": 127}
+        ]
+      }
+    },
+    {
+      "id": "1900000000000000008",
+      "text": "Dica: no Postgres, created_at DESC com índice composto resolve 90% das consultas de timeline. Não precisa de Elasticsearch para tudo. #Postgres #Python",
+      "created_at": "2026-11-12T11:47:00.000Z",
+      "author_id": "1008",
+      "lang": "pt",
+      "public_metrics": {
+        "retweet_count": 21,
+        "reply_count": 6,
+        "like_count": 176,
+        "quote_count": 2,
+        "bookmark_count": 29,
+        "impression_count": 8430
+      },
+      "entities": {
+        "hashtags": [
+          {"tag": "Postgres", "start": 129, "end": 138},
+          {"tag": "Python", "start": 139, "end": 146}
+        ]
+      }
+    },
+    {
+      "id": "1900000000000000009",
+      "text": "PSA: ILIKE '%term%' is fine at 100k rows and painful at 10M. pg_trgm + GIN buys you time. Measure before you migrate. #Postgres #Python",
+      "created_at": "2026-11-11T19:05:00.000Z",
+      "author_id": "1001",
+      "lang": "en",
+      "public_metrics": {
+        "retweet_count": 64,
+        "reply_count": 17,
+        "like_count": 431,
+        "quote_count": 11,
+        "bookmark_count": 96,
+        "impression_count": 26740
+      },
+      "entities": {
+        "hashtags": [
+          {"tag": "Postgres", "start": 113, "end": 122},
+          {"tag": "Python", "start": 123, "end": 130}
+        ]
+      }
+    },
+    {
+      "id": "1900000000000000010",
+      "text": "La mayoría de los equipos no necesita un agente. Necesita tres funciones bien probadas y un cron. #Agents #LLM",
+      "created_at": "2026-11-11T09:33:00.000Z",
+      "author_id": "1002",
+      "lang": "es",
+      "public_metrics": {
+        "retweet_count": 74,
+        "reply_count": 22,
+        "like_count": 508,
+        "quote_count": 13,
+        "bookmark_count": 81,
+        "impression_count": 31260
+      },
+      "entities": {
+        "hashtags": [
+          {"tag": "Agents", "start": 93, "end": 100},
+          {"tag": "LLM", "start": 101, "end": 105}
+        ]
+      }
+    },
+    {
+      "id": "1900000000000000011",
+      "text": "Built a tiny ingestion job: X API v2 → normalized Postgres tables → Flask search. 300 lines total. Writeup soon. #Python #Postgres",
+      "created_at": "2026-11-10T15:21:00.000Z",
+      "author_id": "1003",
+      "lang": "en",
+      "public_metrics": {
+        "retweet_count": 19,
+        "reply_count": 9,
+        "like_count": 163,
+        "quote_count": 5,
+        "bookmark_count": 44,
+        "impression_count": 7210
+      },
+      "entities": {
+        "hashtags": [
+          {"tag": "Python", "start": 103, "end": 110},
+          {"tag": "Postgres", "start": 111, "end": 120}
+        ]
+      }
+    },
+    {
+      "id": "1900000000000000012",
+      "text": "Rate limits are a product feature, not an obstacle. Read the reset header, back off, persist the cursor. Your future self will thank you.",
+      "created_at": "2026-11-10T07:58:00.000Z",
+      "author_id": "1004",
+      "lang": "en",
+      "public_metrics": {
+        "retweet_count": 48,
+        "reply_count": 13,
+        "like_count": 352,
+        "quote_count": 8,
+        "bookmark_count": 67,
+        "impression_count": 19340
+      }
+    },
+    {
+      "id": "1900000000000000013",
+      "text": "Thread: 7 things I check before trusting an LLM eval. 1) Is the judge the same model family? 2) Are the prompts leaked? 3) Is the test set actually held out? #Evals #LLM",
+      "created_at": "2026-11-09T21:12:00.000Z",
+      "author_id": "1005",
+      "lang": "en",
+      "public_metrics": {
+        "retweet_count": 118,
+        "reply_count": 41,
+        "like_count": 806,
+        "quote_count": 26,
+        "bookmark_count": 214,
+        "impression_count": 54780
+      },
+      "entities": {
+        "hashtags": [
+          {"tag": "Evals", "start": 146, "end": 152},
+          {"tag": "LLM", "start": 153, "end": 157}
+        ]
+      }
+    },
+    {
+      "id": "1900000000000000014",
+      "text": "If your retrieval returns 40 chunks and your prompt says 'cite your sources', you have a context window problem, not a citation problem. #RAG #LLM",
+      "created_at": "2026-11-09T12:44:00.000Z",
+      "author_id": "1006",
+      "lang": "en",
+      "public_metrics": {
+        "retweet_count": 71,
+        "reply_count": 25,
+        "like_count": 494,
+        "quote_count": 15,
+        "bookmark_count": 92,
+        "impression_count": 28450
+      },
+      "entities": {
+        "hashtags": [
+          {"tag": "RAG", "start": 133, "end": 137},
+          {"tag": "LLM", "start": 138, "end": 142}
+        ]
+      }
+    },
+    {
+      "id": "1900000000000000015",
+      "text": "New release: a 3B model that runs on a laptop and still follows JSON schemas. Benchmarks and failure cases in the repo. #OpenSource #LLM",
+      "created_at": "2026-11-08T18:03:00.000Z",
+      "author_id": "1007",
+      "lang": "en",
+      "public_metrics": {
+        "retweet_count": 156,
+        "reply_count": 38,
+        "like_count": 1102,
+        "quote_count": 44,
+        "bookmark_count": 263,
+        "impression_count": 78920
+      },
+      "entities": {
+        "hashtags": [
+          {"tag": "OpenSource", "start": 116, "end": 127},
+          {"tag": "LLM", "start": 128, "end": 132}
+        ]
+      }
+    },
+    {
+      "id": "1900000000000000016",
+      "text": "Postgres tip: use EXPLAIN (ANALYZE, BUFFERS) before adding an index. Half the indexes I inherit are never used.",
+      "created_at": "2026-11-08T10:16:00.000Z",
+      "author_id": "1008",
+      "lang": "en",
+      "public_metrics": {
+        "retweet_count": 33,
+        "reply_count": 7,
+        "like_count": 245,
+        "quote_count": 4,
+        "bookmark_count": 51,
+        "impression_count": 11870
+      }
+    },
+    {
+      "id": "1900000000000000017",
+      "text": "Petit rappel : un pipeline de données sans tests, c'est une démo. #Python #MLOps",
+      "created_at": "2026-11-14T13:37:00.000Z",
+      "author_id": "1001",
+      "lang": "fr",
+      "public_metrics": {
+        "retweet_count": 12,
+        "reply_count": 3,
+        "like_count": 97,
+        "quote_count": 1,
+        "bookmark_count": 14,
+        "impression_count": 4820
+      },
+      "entities": {
+        "hashtags": [
+          {"tag": "Python", "start": 69, "end": 76},
+          {"tag": "MLOps", "start": 77, "end": 83}
+        ]
+      }
+    },
+    {
+      "id": "1900000000000000018",
+      "text": "أفضل تحسين لمحرك البحث لدينا كان تنظيف البيانات، وليس تغيير النموذج. #RAG #LLM",
+      "created_at": "2026-11-13T18:50:00.000Z",
+      "author_id": "1002",
+      "lang": "ar",
+      "public_metrics": {
+        "retweet_count": 27,
+        "reply_count": 6,
+        "like_count": 198,
+        "quote_count": 5,
+        "bookmark_count": 33,
+        "impression_count": 10240
+      },
+      "entities": {
+        "hashtags": [
+          {"tag": "RAG", "start": 72, "end": 76},
+          {"tag": "LLM", "start": 77, "end": 81}
+        ]
+      }
+    },
+    {
+      "id": "1900000000000000019",
+      "text": "The best part of a normalized schema: you can answer questions you did not plan for. Users, posts, tags, topics — four joins and done. #Postgres",
+      "created_at": "2026-11-12T20:09:00.000Z",
+      "author_id": "1003",
+      "lang": "en",
+      "public_metrics": {
+        "retweet_count": 29,
+        "reply_count": 10,
+        "like_count": 221,
+        "quote_count": 6,
+        "bookmark_count": 39,
+        "impression_count": 10730
+      },
+      "entities": {
+        "hashtags": [
+          {"tag": "Postgres", "start": 146, "end": 155}
+        ]
+      }
+    },
+    {
+      "id": "1900000000000000020",
+      "text": "I keep a queries.sql file next to every service. If the web app's SQL is not in version control, it does not exist. #MLOps #Python",
+      "created_at": "2026-11-11T16:55:00.000Z",
+      "author_id": "1004",
+      "lang": "en",
+      "public_metrics": {
+        "retweet_count": 36,
+        "reply_count": 8,
+        "like_count": 268,
+        "quote_count": 5,
+        "bookmark_count": 58,
+        "impression_count": 13460
+      },
+      "entities": {
+        "hashtags": [
+          {"tag": "MLOps", "start": 117, "end": 123},
+          {"tag": "Python", "start": 124, "end": 131}
+        ]
+      }
+    },
+    {
+      "id": "1900000000000000021",
+      "text": "小さいモデルで十分なタスクが多い。まずベースラインを測る。 #LLM #Evals",
+      "created_at": "2026-11-10T23:41:00.000Z",
+      "author_id": "1005",
+      "lang": "ja",
+      "public_metrics": {
+        "retweet_count": 14,
+        "reply_count": 4,
+        "like_count": 112,
+        "quote_count": 2,
+        "bookmark_count": 21,
+        "impression_count": 5930
+      },
+      "entities": {
+        "hashtags": [
+          {"tag": "LLM", "start": 32, "end": 36},
+          {"tag": "Evals", "start": 37, "end": 43}
+        ]
+      }
+    },
+    {
+      "id": "1900000000000000022",
+      "text": "Datenbanken sind unterschätzt: Postgres kann Volltextsuche, Trigramme und JSON. #Postgres #GenAI",
+      "created_at": "2026-11-09T08:27:00.000Z",
+      "author_id": "1006",
+      "lang": "de",
+      "public_metrics": {
+        "retweet_count": 22,
+        "reply_count": 5,
+        "like_count": 181,
+        "quote_count": 3,
+        "bookmark_count": 37,
+        "impression_count": 8760
+      },
+      "entities": {
+        "hashtags": [
+          {"tag": "Postgres", "start": 90, "end": 99},
+          {"tag": "GenAI", "start": 100, "end": 106}
+        ]
+      }
+    },
+    {
+      "id": "1900000000000000023",
+      "text": "We deleted 60% of our prompts and the product got better. Less scaffolding, more evaluation. #LLM #Evals #OpenSource",
+      "created_at": "2026-11-08T14:52:00.000Z",
+      "author_id": "1007",
+      "lang": "en",
+      "public_metrics": {
+        "retweet_count": 93,
+        "reply_count": 29,
+        "like_count": 702,
+        "quote_count": 21,
+        "bookmark_count": 147,
+        "impression_count": 39860
+      },
+      "entities": {
+        "hashtags": [
+          {"tag": "LLM", "start": 106, "end": 110},
+          {"tag": "Evals", "start": 111, "end": 117},
+          {"tag": "OpenSource", "start": 118, "end": 129}
+        ]
+      }
+    },
+    {
+      "id": "1900000000000000024",
+      "text": "Ferramenta interna: buscar tweets por texto, hashtag, usuário e data. Flask + Postgres, 200 linhas. #Python #Postgres",
+      "created_at": "2026-11-15T11:26:00.000Z",
+      "author_id": "1008",
+      "lang": "pt",
+      "public_metrics": {
+        "retweet_count": 17,
+        "reply_count": 4,
+        "like_count": 134,
+        "quote_count": 3,
+        "bookmark_count": 25,
+        "impression_count": 6410
+      },
+      "entities": {
+        "hashtags": [
+          {"tag": "Python", "start": 106, "end": 113},
+          {"tag": "Postgres", "start": 114, "end": 123}
+        ]
+      }
+    }
+  ],
+  "includes": {
+    "users": [
+      {
+        "id": "1001",
+        "username": "noorcodes",
+        "name": "Noor Haddad",
+        "created_at": "2016-03-11T00:00:00.000Z",
+        "verified": true,
+        "public_metrics": {"followers_count": 48210, "following_count": 812, "tweet_count": 9412}
+      },
+      {
+        "id": "1002",
+        "username": "mira_ml",
+        "name": "Mira Okafor",
+        "created_at": "2014-07-02T00:00:00.000Z",
+        "verified": true,
+        "public_metrics": {"followers_count": 91240, "following_count": 1104, "tweet_count": 14208}
+      },
+      {
+        "id": "1003",
+        "username": "devonbuilds",
+        "name": "Devon Park",
+        "created_at": "2019-01-22T00:00:00.000Z",
+        "verified": false,
+        "public_metrics": {"followers_count": 8120, "following_count": 603, "tweet_count": 3187}
+      },
+      {
+        "id": "1004",
+        "username": "sara_ops",
+        "name": "Sara Lindqvist",
+        "created_at": "2017-11-05T00:00:00.000Z",
+        "verified": true,
+        "public_metrics": {"followers_count": 23800, "following_count": 402, "tweet_count": 6241}
+      },
+      {
+        "id": "1005",
+        "username": "kai_ml",
+        "name": "Kai Tanaka",
+        "created_at": "2020-06-18T00:00:00.000Z",
+        "verified": false,
+        "public_metrics": {"followers_count": 15400, "following_count": 921, "tweet_count": 2870}
+      },
+      {
+        "id": "1006",
+        "username": "lena_ai",
+        "name": "Lena Fischer",
+        "created_at": "2013-09-30T00:00:00.000Z",
+        "verified": true,
+        "public_metrics": {"followers_count": 126000, "following_count": 1290, "tweet_count": 21455}
+      },
+      {
+        "id": "1007",
+        "username": "openloop_ai",
+        "name": "OpenLoop",
+        "created_at": "2021-02-14T00:00:00.000Z",
+        "verified": true,
+        "public_metrics": {"followers_count": 45200, "following_count": 180, "tweet_count": 1932}
+      },
+      {
+        "id": "1008",
+        "username": "paulo_data",
+        "name": "Paulo Mendes",
+        "created_at": "2018-04-27T00:00:00.000Z",
+        "verified": false,
+        "public_metrics": {"followers_count": 6300, "following_count": 511, "tweet_count": 2478}
+      }
+    ]
+  },
+  "meta": {
+    "newest_id": "1900000000000000024",
+    "oldest_id": "1900000000000000001",
+    "result_count": 24
+  }
+}

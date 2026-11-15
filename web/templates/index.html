@@ -1,0 +1,234 @@
+{% extends "base.html" %}
+
+{% macro posts_table(rows, term) %}
+<div class="table-wrap">
+  <table class="posts">
+    <colgroup>
+      <col class="col-time">
+      <col class="col-author">
+      <col class="col-post">
+      <col class="col-tags">
+      <col class="col-number">
+      <col class="col-number">
+    </colgroup>
+    <thead>
+      <tr>
+        <th scope="col">Time</th>
+        <th scope="col">Author</th>
+        <th scope="col">Post</th>
+        <th scope="col">Hashtags</th>
+        <th scope="col" class="align-right">Likes</th>
+        <th scope="col" class="align-right">Reposts</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for row in rows %}
+      <tr>
+        <td class="cell-time" data-label="Time">
+          <time{% if row.created_at %} datetime="{{ row.created_at.isoformat() }}"{% endif %}>
+            <span class="date">{{ row.created_at|date }}</span>
+            <span class="clock">{{ row.created_at|time }}</span>
+          </time>
+        </td>
+
+        <td class="cell-author" data-label="Author">
+          <span class="author-name">{{ row.display_name or row.username }}</span>
+          <span class="author-handle">@{{ row.username }}{% if row.verified %}<span class="verified" title="Verified account" aria-label="Verified account">✓</span>{% endif %}</span>
+        </td>
+
+        <td class="cell-post" data-label="Post">
+          <p class="post-text">{{ row.text|highlight(term) }}</p>
+          <p class="post-meta">
+            <a class="tweet-link" href="https://x.com/i/web/status/{{ row.tweet_id }}" target="_blank" rel="noopener noreferrer">#{{ row.tweet_id }}</a>
+            <span class="lang">{{ row.lang or "und" }}</span>
+            {% if row.reply_count %}<span class="reply-count">{{ row.reply_count|num }} replies</span>{% endif %}
+          </p>
+        </td>
+
+        <td class="cell-tags" data-label="Hashtags">
+          <div class="tag-list">
+            {% for tag in row.hashtags %}
+            <span class="tag">#{{ tag }}</span>
+            {% else %}
+            <span class="muted">none</span>
+            {% endfor %}
+          </div>
+        </td>
+
+        <td class="cell-number" data-label="Likes">
+          <span class="metric" title="{{ row.reply_count|num }} replies, {{ row.quote_count|num }} quotes">{{ row.like_count|num }}</span>
+        </td>
+        <td class="cell-number" data-label="Reposts">
+          <span class="metric">{{ row.retweet_count|num }}</span>
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endmacro %}
+
+{% block content %}
+<section class="hero">
+  <h1>Search the archive<span class="period">.</span></h1>
+  <p>
+    Every post from the ingestion run is stored in PostgreSQL: authors, hashtags,
+    timestamps, and metrics. Filter the set below, or browse what arrived most recently.
+  </p>
+</section>
+
+<section class="search-panel" aria-labelledby="search-heading">
+  <h2 class="visually-hidden" id="search-heading">Search stored posts</h2>
+  <form class="search-form" method="get" action="{{ url_for('search') }}" role="search">
+    <div class="field field--text">
+      <label for="q">Text contains</label>
+      <input id="q" name="q" type="search" value="{{ filters.q }}"
+             placeholder="retrieval, evals, postgres…" maxlength="200"
+             autocomplete="off" spellcheck="false">
+    </div>
+
+    <div class="field field--quarter">
+      <label for="hashtag">Hashtag</label>
+      <input id="hashtag" name="hashtag" type="text" value="{{ filters.hashtag }}"
+             placeholder="RAG" maxlength="80" autocomplete="off" spellcheck="false">
+    </div>
+
+    <div class="field field--quarter">
+      <label for="username">Author</label>
+      <input id="username" name="username" type="text" value="{{ filters.username }}"
+             placeholder="noorcodes" maxlength="80" autocomplete="off" spellcheck="false">
+    </div>
+
+    <div class="field field--quarter">
+      <label for="start_date">From</label>
+      <input id="start_date" name="start_date" type="date" value="{{ filters.start_date[:10] }}">
+    </div>
+
+    <div class="field field--quarter">
+      <label for="end_date">To</label>
+      <input id="end_date" name="end_date" type="date" value="{{ filters.end_date[:10] }}">
+    </div>
+
+    <div class="field field--quarter">
+      <label for="lang">Language</label>
+      <select id="lang" name="lang">
+        {% for code, name in languages %}
+        <option value="{{ code }}"{% if filters.lang == code %} selected{% endif %}>{{ name }}</option>
+        {% endfor %}
+      </select>
+    </div>
+
+    <div class="field field--quarter">
+      <label for="topic_id">Ingestion run</label>
+      {% if topics %}
+      <select id="topic_id" name="topic_id">
+        <option value="">All runs</option>
+        {% for topic in topics %}
+        <option value="{{ topic.topic_id }}"{% if filters.topic_id == topic.topic_id|string %} selected{% endif %}>
+          {{ topic.query }} ({{ topic.tweet_count|num }} posts, {{ topic.run_at|date }})
+        </option>
+        {% endfor %}
+      </select>
+      {% else %}
+      <select id="topic_id" disabled>
+        <option>No runs yet</option>
+      </select>
+      {% endif %}
+    </div>
+
+    <div class="form-actions">
+      <a class="reset-link" href="{{ url_for('index') }}">Reset</a>
+      <button class="button" type="submit">Search posts</button>
+    </div>
+  </form>
+</section>
+
+{% if filters.errors %}
+<div class="notice notice-error" role="alert">
+  <ul class="notice-list">
+    {% for error in filters.errors %}
+    <li>{{ error }}</li>
+    {% endfor %}
+  </ul>
+</div>
+{% endif %}
+
+{% if db_error %}
+<div class="notice notice-error" role="alert">
+  <p class="notice-title">The archive database is not reachable.</p>
+  <p>{{ db_error }}</p>
+  <p class="notice-hint">Start PostgreSQL, then run <code>python check.py</code> for the details.</p>
+</div>
+{% endif %}
+
+{% if not db_error %}
+<section class="results" aria-labelledby="results-title">
+  <div class="results-head">
+    <h2 id="results-title">{% if latest %}Recently ingested{% else %}Matches{% endif %}</h2>
+    <p class="results-meta">
+      {% if latest %}
+      <span>The {{ results|length }} newest {{ "post" if results|length == 1 else "posts" }}</span>
+      {% else %}
+      <span>{{ total|num }} {{ "post" if total == 1 else "posts" }}</span>
+      {% if elapsed_ms is not none %}<span>{{ "%.0f"|format(elapsed_ms) }} ms</span>{% endif %}
+      {% if pager and pager.pages > 1 %}<span>Page {{ pager.page }} of {{ pager.pages }}</span>{% endif %}
+      {% endif %}
+    </p>
+  </div>
+
+  {% if filters.active and filters.chips %}
+  <div class="filter-bar">
+    <span class="filter-label">Filters</span>
+    {% for chip in filters.chips %}
+    <span class="chip"><span class="chip-label">{{ chip.label }}</span>{{ chip.value }}</span>
+    {% endfor %}
+    <a class="clear-link" href="{{ url_for('index') }}">Clear all</a>
+  </div>
+  {% endif %}
+
+  {% if filters.active and not results %}
+  <div class="empty">
+    <p class="empty-title">No posts match those filters.</p>
+    <p>Try a shorter text fragment, a different hashtag, or a wider date range.</p>
+    <a class="empty-action" href="{{ url_for('index') }}">Clear filters</a>
+  </div>
+  {% elif latest and not results %}
+  <div class="empty">
+    <p class="empty-title">The archive is empty.</p>
+    <p>Load the bundled payload, then reload this page:</p>
+    <code class="command">python ingest/fetch_and_load.py</code>
+  </div>
+  {% else %}
+  {{ posts_table(results, filters.q) }}
+  {% endif %}
+
+  {% if pager and pager.pages > 1 %}
+  <nav class="pager" aria-label="Result pages">
+    {% if pager.prev %}
+    <a class="pager-step" href="{{ pager.prev }}" rel="prev">Previous</a>
+    {% else %}
+    <span class="pager-step is-disabled">Previous</span>
+    {% endif %}
+
+    <ol class="pager-numbers">
+      {% for number in pager.numbers %}
+      {% if number is none %}
+      <li class="pager-gap" aria-hidden="true">…</li>
+      {% elif number == pager.page %}
+      <li><span class="pager-number is-current" aria-current="page">{{ number }}</span></li>
+      {% else %}
+      <li><a class="pager-number" href="{{ page_url(number) }}">{{ number }}</a></li>
+      {% endif %}
+      {% endfor %}
+    </ol>
+
+    {% if pager.next %}
+    <a class="pager-step" href="{{ pager.next }}" rel="next">Next</a>
+    {% else %}
+    <span class="pager-step is-disabled">Next</span>
+    {% endif %}
+  </nav>
+  {% endif %}
+</section>
+{% endif %}
+{% endblock %}
