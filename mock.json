@@ -16,21 +16,9 @@
       },
       "entities": {
         "hashtags": [
-          {
-            "tag": "RAG",
-            "start": 143,
-            "end": 147
-          },
-          {
-            "tag": "Python",
-            "start": 148,
-            "end": 155
-          },
-          {
-            "tag": "Postgres",
-            "start": 156,
-            "end": 165
-          }
+          {"tag": "RAG", "start": 143, "end": 147},
+          {"tag": "Python", "start": 148, "end": 155},
+          {"tag": "Postgres", "start": 156, "end": 165}
         ]
       }
     },
@@ -50,16 +38,8 @@
       },
       "entities": {
         "hashtags": [
-          {
-            "tag": "Agents",
-            "start": 120,
-            "end": 127
-          },
-          {
-            "tag": "Evals",
-            "start": 128,
-            "end": 134
-          }
+          {"tag": "Agents", "start": 120, "end": 127},
+          {"tag": "Evals", "start": 128, "end": 134}
         ]
       }
     },
@@ -79,16 +59,8 @@
       },
       "entities": {
         "hashtags": [
-          {
-            "tag": "LLM",
-            "start": 111,
-            "end": 115
-          },
-          {
-            "tag": "Evals",
-            "start": 116,
-            "end": 122
-          }
+          {"tag": "LLM", "start": 111, "end": 115},
+          {"tag": "Evals", "start": 116, "end": 122}
         ]
       }
     },
@@ -108,16 +80,8 @@
       },
       "entities": {
         "hashtags": [
-          {
-            "tag": "MLOps",
-            "start": 123,
-            "end": 129
-          },
-          {
-            "tag": "RAG",
-            "start": 130,
-            "end": 134
-          }
+          {"tag": "MLOps", "start": 123, "end": 129},
+          {"tag": "RAG", "start": 130, "end": 134}
         ]
       }
     },
@@ -137,16 +101,8 @@
       },
       "entities": {
         "hashtags": [
-          {
-            "tag": "LLM",
-            "start": 44,
-            "end": 48
-          },
-          {
-            "tag": "RAG",
-            "start": 49,
-            "end": 53
-          }
+          {"tag": "LLM", "start": 44, "end": 48},
+          {"tag": "RAG", "start": 49, "end": 53}
         ]
       }
     },
@@ -166,16 +122,8 @@
       },
       "entities": {
         "hashtags": [
-          {
-            "tag": "Evals",
-            "start": 140,
-            "end": 146
-          },
-          {
-            "tag": "GenAI",
-            "start": 147,
-            "end": 153
-          }
+          {"tag": "Evals", "start": 140, "end": 146},
+          {"tag": "GenAI", "start": 147, "end": 153}
         ]
       }
     },
@@ -195,21 +143,9 @@
       },
       "entities": {
         "hashtags": [
-          {
-            "tag": "OpenSource",
-            "start": 104,
-            "end": 115
-          },
-          {
-            "tag": "LLM",
-            "start": 116,
-            "end": 120
-          },
-          {
-            "tag": "Evals",
-            "start": 121,
-            "end": 127
-          }
+          {"tag": "OpenSource", "start": 104, "end": 115},
+          {"tag": "LLM", "start": 116, "end": 120},
+          {"tag": "Evals", "start": 121, "end": 127}
         ]
       }
     },
@@ -229,16 +165,8 @@
       },
       "entities": {
         "hashtags": [
-          {
-            "tag": "Postgres",
-            "start": 129,
-            "end": 138
-          },
-          {
-            "tag": "Python",
-            "start": 139,
-            "end": 146
-          }
+          {"tag": "Postgres", "start": 129, "end": 138},
+          {"tag": "Python", "start": 139, "end": 146}
         ]
       }
     },
@@ -258,16 +186,8 @@
       },
       "entities": {
         "hashtags": [
-          {
-            "tag": "Postgres",
-            "start": 113,
-            "end": 122
-          },
-          {
-            "tag": "Python",
-            "start": 123,
-            "end": 130
-          }
+          {"tag": "Postgres", "start": 113, "end": 122},
+          {"tag": "Python", "start": 123, "end": 130}
         ]
       }
     },
@@ -287,16 +207,8 @@
       },
       "entities": {
         "hashtags": [
-          {
-            "tag": "Agents",
-            "start": 93,
-            "end": 100
-          },
-          {
-            "tag": "LLM",
-            "start": 101,
-            "end": 105
-          }
+          {"tag": "Agents", "start": 93, "end": 100},
+          {"tag": "LLM", "start": 101, "end": 105}
         ]
       }
     },
@@ -316,16 +228,8 @@
       },
       "entities": {
         "hashtags": [
-          {
-            "tag": "Python",
-            "start": 103,
-            "end": 110
-          },
-          {
-            "tag": "Postgres",
-            "start": 111,
-            "end": 120
-          }
+          {"tag": "Python", "start": 103, "end": 110},
+          {"tag": "Postgres", "start": 111, "end": 120}
         ]
       }
     },
@@ -360,16 +264,8 @@
       },
       "entities": {
         "hashtags": [
-          {
-            "tag": "Evals",
-            "start": 146,
-            "end": 152
-          },
-          {
-            "tag": "LLM",
-            "start": 153,
-            "end": 157
-          }
+          {"tag": "Evals", "start": 146, "end": 152},
+          {"tag": "LLM", "start": 153, "end": 157}
         ]
       }
     },
@@ -389,16 +285,8 @@
       },
       "entities": {
         "hashtags": [
-          {
-            "tag": "RAG",
-            "start": 133,
-            "end": 137
-          },
-          {
-            "tag": "LLM",
-            "start": 138,
-            "end": 142
-          }
+          {"tag": "RAG", "start": 133, "end": 137},
+          {"tag": "LLM", "start": 138, "end": 142}
         ]
       }
     },
@@ -418,16 +306,8 @@
       },
       "entities": {
         "hashtags": [
-          {
-            "tag": "OpenSource",
-            "start": 116,
-            "end": 127
-          },
-          {
-            "tag": "LLM",
-            "start": 128,
-            "end": 132
-          }
+          {"tag": "OpenSource", "start": 116, "end": 127},
+          {"tag": "LLM", "start": 128, "end": 132}
         ]
       }
     },
@@ -462,16 +342,8 @@
       },
       "entities": {
         "hashtags": [
-          {
-            "tag": "Python",
-            "start": 69,
-            "end": 76
-          },
-          {
-            "tag": "MLOps",
-            "start": 77,
-            "end": 83
-          }
+          {"tag": "Python", "start": 69, "end": 76},
+          {"tag": "MLOps", "start": 77, "end": 83}
         ]
       }
     },
@@ -491,16 +363,8 @@
       },
       "entities": {
         "hashtags": [
-          {
-            "tag": "RAG",
-            "start": 72,
-            "end": 76
-          },
-          {
-            "tag": "LLM",
-            "start": 77,
-            "end": 81
-          }
+          {"tag": "RAG", "start": 72, "end": 76},
+          {"tag": "LLM", "start": 77, "end": 81}
         ]
       }
     },
@@ -520,11 +384,7 @@
       },
       "entities": {
         "hashtags": [
-          {
-            "tag": "Postgres",
-            "start": 146,
-            "end": 155
-          }
+          {"tag": "Postgres", "start": 146, "end": 155}
         ]
       }
     },
@@ -544,16 +404,8 @@
       },
       "entities": {
         "hashtags": [
-          {
-            "tag": "MLOps",
-            "start": 117,
-            "end": 123
-          },
-          {
-            "tag": "Python",
-            "start": 124,
-            "end": 131
-          }
+          {"tag": "MLOps", "start": 117, "end": 123},
+          {"tag": "Python", "start": 124, "end": 131}
         ]
       }
     },
@@ -573,16 +425,8 @@
       },
       "entities": {
         "hashtags": [
-          {
-            "tag": "LLM",
-            "start": 32,
-            "end": 36
-          },
-          {
-            "tag": "Evals",
-            "start": 37,
-            "end": 43
-          }
+          {"tag": "LLM", "start": 32, "end": 36},
+          {"tag": "Evals", "start": 37, "end": 43}
         ]
       }
     },
@@ -602,16 +446,8 @@
       },
       "entities": {
         "hashtags": [
-          {
-            "tag": "Postgres",
-            "start": 90,
-            "end": 99
-          },
-          {
-            "tag": "GenAI",
-            "start": 100,
-            "end": 106
-          }
+          {"tag": "Postgres", "start": 90, "end": 99},
+          {"tag": "GenAI", "start": 100, "end": 106}
         ]
       }
     },
@@ -631,21 +467,9 @@
       },
       "entities": {
         "hashtags": [
-          {
-            "tag": "LLM",
-            "start": 106,
-            "end": 110
-          },
-          {
-            "tag": "Evals",
-            "start": 111,
-            "end": 117
-          },
-          {
-            "tag": "OpenSource",
-            "start": 118,
-            "end": 129
-          }
+          {"tag": "LLM", "start": 106, "end": 110},
+          {"tag": "Evals", "start": 111, "end": 117},
+          {"tag": "OpenSource", "start": 118, "end": 129}
         ]
       }
     },
@@ -665,16 +489,8 @@
       },
       "entities": {
         "hashtags": [
-          {
-            "tag": "Python",
-            "start": 106,
-            "end": 113
-          },
-          {
-            "tag": "Postgres",
-            "start": 114,
-            "end": 123
-          }
+          {"tag": "Python", "start": 106, "end": 113},
+          {"tag": "Postgres", "start": 114, "end": 123}
         ]
       }
     }
@@ -687,11 +503,7 @@
         "name": "Noor Haddad",
         "created_at": "2016-03-11T00:00:00.000Z",
         "verified": true,
-        "public_metrics": {
-          "followers_count": 48210,
-          "following_count": 812,
-          "tweet_count": 9412
-        }
+        "public_metrics": {"followers_count": 48210, "following_count": 812, "tweet_count": 9412}
       },
       {
         "id": "1002",
@@ -699,11 +511,7 @@
         "name": "Mira Okafor",
         "created_at": "2014-07-02T00:00:00.000Z",
         "verified": true,
-        "public_metrics": {
-          "followers_count": 91240,
-          "following_count": 1104,
-          "tweet_count": 14208
-        }
+        "public_metrics": {"followers_count": 91240, "following_count": 1104, "tweet_count": 14208}
       },
       {
         "id": "1003",
@@ -711,11 +519,7 @@
         "name": "Devon Park",
         "created_at": "2019-01-22T00:00:00.000Z",
         "verified": false,
-        "public_metrics": {
-          "followers_count": 8120,
-          "following_count": 603,
-          "tweet_count": 3187
-        }
+        "public_metrics": {"followers_count": 8120, "following_count": 603, "tweet_count": 3187}
       },
       {
         "id": "1004",
@@ -723,11 +527,7 @@
         "name": "Sara Lindqvist",
         "created_at": "2017-11-05T00:00:00.000Z",
         "verified": true,
-        "public_metrics": {
-          "followers_count": 23800,
-          "following_count": 402,
-          "tweet_count": 6241
-        }
+        "public_metrics": {"followers_count": 23800, "following_count": 402, "tweet_count": 6241}
       },
       {
         "id": "1005",
@@ -735,11 +535,7 @@
         "name": "Kai Tanaka",
         "created_at": "2020-06-18T00:00:00.000Z",
         "verified": false,
-        "public_metrics": {
-          "followers_count": 15400,
-          "following_count": 921,
-          "tweet_count": 2870
-        }
+        "public_metrics": {"followers_count": 15400, "following_count": 921, "tweet_count": 2870}
       },
       {
         "id": "1006",
@@ -747,11 +543,7 @@
         "name": "Lena Fischer",
         "created_at": "2013-09-30T00:00:00.000Z",
         "verified": true,
-        "public_metrics": {
-          "followers_count": 126000,
-          "following_count": 1290,
-          "tweet_count": 21455
-        }
+        "public_metrics": {"followers_count": 126000, "following_count": 1290, "tweet_count": 21455}
       },
       {
         "id": "1007",
@@ -759,11 +551,7 @@
         "name": "OpenLoop",
         "created_at": "2021-02-14T00:00:00.000Z",
         "verified": true,
-        "public_metrics": {
-          "followers_count": 45200,
-          "following_count": 180,
-          "tweet_count": 1932
-        }
+        "public_metrics": {"followers_count": 45200, "following_count": 180, "tweet_count": 1932}
       },
       {
         "id": "1008",
@@ -771,11 +559,7 @@
         "name": "Paulo Mendes",
         "created_at": "2018-04-27T00:00:00.000Z",
         "verified": false,
-        "public_metrics": {
-          "followers_count": 6300,
-          "following_count": 511,
-          "tweet_count": 2478
-        }
+        "public_metrics": {"followers_count": 6300, "following_count": 511, "tweet_count": 2478}
       }
     ]
   },

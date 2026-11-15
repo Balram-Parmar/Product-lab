@@ -354,13 +354,7 @@ def page_url(number: int) -> str:
 
 
 def create_app() -> Flask:
-    # Vercel serves public/** from its CDN. Point Flask at the same files so
-    # local development and production use one asset tree.
-    app = Flask(
-        __name__,
-        static_folder=str(PROJECT_ROOT / "public" / "assets"),
-        static_url_path="/assets",
-    )
+    app = Flask(__name__)
     app.config.update(
         SECRET_KEY=os.getenv("FLASK_SECRET_KEY", "dev-only-change-me"),
         PER_PAGE=_env_int("PAGE_SIZE", 25),
